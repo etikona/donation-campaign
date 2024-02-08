@@ -29,7 +29,11 @@ function Navbar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center" }}
+      className="container"
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography>
@@ -53,7 +57,7 @@ function Navbar(props) {
     <Box>
       <CssBaseline />
       <AppBar component="nav">
-        <Toolbar className="bg-white ">
+        <Toolbar className=" bg-white shadow-none">
           <IconButton
             color="inherit"
             aria-label="open drawer"
