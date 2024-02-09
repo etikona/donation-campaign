@@ -3,7 +3,7 @@ import React from "react";
 
 const DonationPage = () => {
   return (
-    <div>
+    <div className="container  m-auto">
       <h2 className="text-black text-center text-3xl">Donation page</h2>
       <Donations />
     </div>
