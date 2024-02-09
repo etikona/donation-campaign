@@ -1,9 +1,19 @@
+import Image from "next/image";
 import React from "react";
-
+import banner from "@/assets/Banner.jpg";
 const Banner = () => {
   return (
     <div>
-      <h2 className="text-black text-center text-4xl font-bold mt-10">
+      {/* <div className="w-full h-full d-none fixed  z-10 justify-center items-center blur-none">
+       
+        <Image
+          className="m-auto w-10/12 rounded-lg"
+          src={banner}
+          alt="banner image"
+        />
+      </div> */}
+
+      <h2 className="text-white text-center text-4xl font-bold mt-10 mb-8">
         I Grow By Helping People In Need
       </h2>
       <div className="text-center mt-5">
