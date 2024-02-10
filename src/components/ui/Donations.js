@@ -6,10 +6,11 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea } from "@mui/material";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Donations = async () => {
   const data = await getAllDonations();
-
+  console.log(data);
   //   console.log(donations);
   return (
     <div className="grid grid-cols-3 w-full my-12 gap-y-5">
@@ -40,9 +41,11 @@ const Donations = async () => {
               >
                 {donation.name}
               </Typography>
-              <button className="bg-green-300 p-1 rounded w-20 text-green-600 font-semibold m-auto">
-                Details
-              </button>
+              <Link href={`/donations/${donation._id}`}>
+                <button className="bg-green-300 p-1 rounded w-20 text-green-600 font-semibold m-auto">
+                  Details
+                </button>
+              </Link>
             </CardContent>
           </CardActionArea>
         </Card>
