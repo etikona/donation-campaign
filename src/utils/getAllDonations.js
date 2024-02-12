@@ -6,10 +6,20 @@ export const getAllDonations = async () => {
 };
 
 export const getSingleDonation = async (id) => {
-  const res = fetch(`http://localhost:5000/donations/${id}`);
-  console.log(res);
-  const data = (await res).json();
-  console.log(data);
+  try {
+    const res = await fetch(`http://localhost:5000/donations/${id}`);
+    console.log(res.headers.get("Content-Type"));
+    if (!res.ok) {
+      throw new Error(`Network response was not ok: ${res.status}`);
+    }
 
-  return data;
+    const data = await res.json();
+
+    // Validate data here
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching donation:", error);
+    // Handle error gracefully, e.g., display user-friendly message
+  }
 };

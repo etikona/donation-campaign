@@ -1,7 +1,6 @@
 import Donations from "@/components/ui/Donations";
-import React from "react";
 
-const DonationPage = () => {
+const DonationsPage = () => {
   return (
     <div className="container  m-auto">
       <h2 className="text-black text-center text-3xl">Donation page</h2>
@@ -10,4 +9,4 @@ const DonationPage = () => {
   );
 };
 
-export default DonationPage;
+export default DonationsPage;

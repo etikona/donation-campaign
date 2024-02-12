@@ -35,7 +35,7 @@ function Navbar(props) {
       </Typography>
       <Divider />
       <Link href="/">Home</Link>
-      <Link href="/donation">Donation</Link>
+      <Link href="/donations">Donation</Link>
       <Link href="/statistics">Statistics</Link>
     </Box>
   );
@@ -73,7 +73,7 @@ function Navbar(props) {
               Home
             </Link>
             <Link
-              href="/donation"
+              href="/donations"
               className="text-black font-sans font-semibold active:text-red-500 target:text-yellow-600 active:underline active:underline-offset-1 mr-5"
             >
               Donation

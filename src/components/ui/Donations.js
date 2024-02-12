@@ -1,4 +1,4 @@
-import { getAllDonations } from "@/utils/getAllDonations";
+import { getAllDonations, getSingleDonation } from "@/utils/getAllDonations";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -10,7 +10,8 @@ import Link from "next/link";
 
 const Donations = async () => {
   const data = await getAllDonations();
-  console.log(data);
+  // console.log(data);
+
   //   console.log(donations);
   return (
     <div className="grid grid-cols-3 w-full my-12 gap-y-5">
